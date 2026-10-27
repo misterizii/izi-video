@@ -16,6 +16,18 @@ export const bagianSchema = z.object({
   judul: z.string().min(1),
   /** Satu kalimat penjelas di kotak bawah. */
   penjelasan: z.string().min(1),
+  /**
+   * Gambar khusus untuk bagian ini, ditulis sebagai markup SVG.
+   *
+   * Di sinilah materinya boleh bebas: susunan angka bersusun, diagram,
+   * perbandingan, apa pun yang paling menjelaskan. Yang tetap kaku adalah
+   * font, warna, dan tata letak di sekelilingnya.
+   *
+   * Pakai var(--mz-accent), var(--mz-heading), var(--mz-text-muted) dan
+   * token lain supaya gambarnya ikut berubah saat temanya navy atau terang.
+   * Kalau dikosongkan, yang tampil adalah kartu bernomor bawaan.
+   */
+  visual: z.string().optional(),
 });
 
 export const pembukaCelahSchema = z.discriminatedUnion('jenis', [

@@ -17,6 +17,7 @@ import { beatAt, buildTimeline } from './timeline';
 import { masuk, redup } from './anim';
 import { KartuBagian, PanahBawah } from './scenes/KartuBagian';
 import { JawabanSalah } from './scenes/JawabanSalah';
+import { Nomor, Visual } from './scenes/Visual';
 import { Bunyi } from './Bunyi';
 
 /** Akun tempat video ini diunggah. */
@@ -69,19 +70,33 @@ export function Explainer(materi: Materi) {
 
   if (beat.kind === 'bagian') {
     const aktif = beat.index ?? 0;
-    caption = materi.bagian[aktif].penjelasan;
-    visual = (
-      <TumpukanKartu
-        materi={materi}
-        aktif={aktif}
-        // Pada alur berurutan, bagian yang belum dibahas belum boleh terlihat:
-        // memperlihatkan akhir cerita lebih dulu menghapus alasan menontonnya.
-        tampil={urut ? aktif + 1 : materi.bagian.length}
-        urut={urut}
-        local={local}
-        fps={fps}
-      />
-    );
+    const b = materi.bagian[aktif];
+    caption = b.penjelasan;
+
+    if (b.visual) {
+      // Gambar khusus mengambil ruang utama. Judul bagian naik jadi baris
+      // besar, dengan nomornya tetap ada sebagai penanda urutan pembahasan.
+      judul = (
+        <span style={{ display: 'inline-flex', alignItems: 'baseline', gap: 20 }}>
+          <Nomor nomor={aktif + 1} />
+          {b.judul}
+        </span>
+      );
+      visual = <Visual svg={b.visual} style={masuk(local, { delay: Math.round(fps * 0.2), fps })} />;
+    } else {
+      visual = (
+        <TumpukanKartu
+          materi={materi}
+          aktif={aktif}
+          // Pada alur berurutan, bagian yang belum dibahas belum boleh terlihat:
+          // memperlihatkan akhir cerita lebih dulu menghapus alasan menontonnya.
+          tampil={urut ? aktif + 1 : materi.bagian.length}
+          urut={urut}
+          local={local}
+          fps={fps}
+        />
+      );
+    }
   }
 
   if (beat.kind === 'rekap') {

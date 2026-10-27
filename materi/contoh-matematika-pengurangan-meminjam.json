@@ -3,23 +3,35 @@
   "kelas": "3",
   "topik": "Pengurangan Meminjam",
   "episode": 1,
-  "judul": "205 - 128 kenapa sering salah",
-  "kataKunci": "sering salah",
+  "judul": "205 - 128 kok bukan 123?",
+  "kataKunci": "bukan 123",
   "pembukaCelah": {
     "jenis": "miskonsepsi",
-    "teks": "Banyak yang menjawab 123. Kenapa salah?",
+    "teks": "Hampir semua anak jawab ini. Lihat kenapa keliru.",
     "jawabanSalah": "123"
   },
   "istilahKunci": {
     "istilah": "Meminjam",
-    "arti": "Mengambil satu puluhan untuk menambah satuan."
+    "arti": "Ambil satu dari sebelah kiri, biar yang kanan cukup."
   },
   "alur": "urut",
   "bagian": [
-    { "judul": "Satuan tidak cukup", "penjelasan": "5 dikurangi 8 tidak bisa, jadi harus meminjam." },
-    { "judul": "Pinjam dari ratusan", "penjelasan": "Puluhannya kosong, jadi pinjam dulu dari ratusan." },
-    { "judul": "Kurangi dari kanan", "penjelasan": "Setelah meminjam, kurangi satuan, puluhan, lalu ratusan." }
+    {
+      "judul": "5 dikurangi 8? Kurang",
+      "penjelasan": "Angkanya nggak cukup. Harus cari pinjaman dulu.",
+      "visual": "<svg viewBox='0 0 560 380' width='100%' style='max-height:100%'><text x='100' y='285' text-anchor='middle' font-size='72' font-weight='800' fill='var(--mz-text-muted)' opacity='1'>&#8722;</text><text x='215' y='175' text-anchor='middle' font-size='96' font-weight='800' fill='var(--mz-heading)' opacity='1'>2</text><text x='215' y='285' text-anchor='middle' font-size='96' font-weight='800' fill='var(--mz-heading)' opacity='1'>1</text><text x='325' y='175' text-anchor='middle' font-size='96' font-weight='800' fill='var(--mz-heading)' opacity='1'>0</text><text x='325' y='285' text-anchor='middle' font-size='96' font-weight='800' fill='var(--mz-heading)' opacity='1'>2</text><text x='435' y='175' text-anchor='middle' font-size='96' font-weight='800' fill='var(--mz-heading)' opacity='1'>5</text><text x='435' y='285' text-anchor='middle' font-size='96' font-weight='800' fill='var(--mz-heading)' opacity='1'>8</text><line x1='100' y1='313' x2='490' y2='313' stroke='var(--mz-text-muted)' stroke-width='5' stroke-linecap='round'/><rect x='388' y='95' width='96' height='205' rx='18' fill='none' stroke='var(--mz-red-500)' stroke-width='5'/><text x='435' y='375' text-anchor='middle' font-size='80' font-weight='800' fill='var(--mz-red-500)' opacity='1'>?</text></svg>"
+    },
+    {
+      "judul": "Puluhannya kosong",
+      "penjelasan": "Jadi pinjam dari ratusan dulu, baru turun ke satuan.",
+      "visual": "<svg viewBox='0 0 560 380' width='100%' style='max-height:100%'><text x='100' y='285' text-anchor='middle' font-size='72' font-weight='800' fill='var(--mz-text-muted)' opacity='1'>&#8722;</text><text x='215' y='175' text-anchor='middle' font-size='96' font-weight='800' fill='var(--mz-heading)' opacity='0.28'>2</text><text x='215' y='285' text-anchor='middle' font-size='96' font-weight='800' fill='var(--mz-heading)' opacity='1'>1</text><text x='325' y='175' text-anchor='middle' font-size='96' font-weight='800' fill='var(--mz-heading)' opacity='0.28'>0</text><text x='325' y='285' text-anchor='middle' font-size='96' font-weight='800' fill='var(--mz-heading)' opacity='1'>2</text><text x='435' y='175' text-anchor='middle' font-size='96' font-weight='800' fill='var(--mz-heading)' opacity='0.28'>5</text><text x='435' y='285' text-anchor='middle' font-size='96' font-weight='800' fill='var(--mz-heading)' opacity='1'>8</text><line x1='100' y1='313' x2='490' y2='313' stroke='var(--mz-text-muted)' stroke-width='5' stroke-linecap='round'/><text x='215' y='70' text-anchor='middle' font-size='56' font-weight='800' fill='var(--mz-accent)' opacity='1'>1</text><text x='325' y='70' text-anchor='middle' font-size='56' font-weight='800' fill='var(--mz-accent)' opacity='1'>9</text><text x='435' y='70' text-anchor='middle' font-size='56' font-weight='800' fill='var(--mz-accent)' opacity='1'>15</text></svg>"
+    },
+    {
+      "judul": "Baru deh dikurangi",
+      "penjelasan": "15 dikurangi 8 sama dengan 7. Lanjut ke kiri.",
+      "visual": "<svg viewBox='0 0 560 380' width='100%' style='max-height:100%'><text x='100' y='285' text-anchor='middle' font-size='72' font-weight='800' fill='var(--mz-text-muted)' opacity='1'>&#8722;</text><text x='215' y='175' text-anchor='middle' font-size='96' font-weight='800' fill='var(--mz-heading)' opacity='0.28'>2</text><text x='215' y='285' text-anchor='middle' font-size='96' font-weight='800' fill='var(--mz-heading)' opacity='1'>1</text><text x='325' y='175' text-anchor='middle' font-size='96' font-weight='800' fill='var(--mz-heading)' opacity='0.28'>0</text><text x='325' y='285' text-anchor='middle' font-size='96' font-weight='800' fill='var(--mz-heading)' opacity='1'>2</text><text x='435' y='175' text-anchor='middle' font-size='96' font-weight='800' fill='var(--mz-heading)' opacity='0.28'>5</text><text x='435' y='285' text-anchor='middle' font-size='96' font-weight='800' fill='var(--mz-heading)' opacity='1'>8</text><line x1='100' y1='313' x2='490' y2='313' stroke='var(--mz-text-muted)' stroke-width='5' stroke-linecap='round'/><text x='215' y='70' text-anchor='middle' font-size='56' font-weight='800' fill='var(--mz-accent)' opacity='0.4'>1</text><text x='325' y='70' text-anchor='middle' font-size='56' font-weight='800' fill='var(--mz-accent)' opacity='0.4'>9</text><text x='435' y='70' text-anchor='middle' font-size='56' font-weight='800' fill='var(--mz-accent)' opacity='0.4'>15</text><text x='325' y='375' text-anchor='middle' font-size='96' font-weight='800' fill='var(--mz-accent)' opacity='1'>7</text><text x='435' y='375' text-anchor='middle' font-size='96' font-weight='800' fill='var(--mz-accent)' opacity='1'>7</text></svg>"
+    }
   ],
-  "rekap": "Cek satuan, pinjam kalau kurang, baru kurangi.",
-  "pancingan": "Coba 300 - 147. Jawab di komentar."
+  "rekap": "Cek satuannya dulu. Kalau kurang, pinjam.",
+  "pancingan": "300 - 147 berapa? Tulis di komentar ya."
 }
