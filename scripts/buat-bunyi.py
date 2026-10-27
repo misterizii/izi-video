@@ -38,23 +38,47 @@ def normalkan(x, puncak):
     return x * (puncak / maks) if maks > 0 else x
 
 
-def woosh(durasi=0.34, puncak=0.36):
-    """Derau yang disapu dari rendah ke tinggi — terasa seperti sesuatu lewat."""
+def tirai(n, naik=0.3, turun=0.55):
+    """Amplop yang naik dan turun mulus, tanpa sudut tajam."""
+    t = np.linspace(0, 1, n)
+    batas = naik
+    keluar = np.where(
+        t < batas,
+        0.5 - 0.5 * np.cos(np.pi * t / batas),
+        0.5 + 0.5 * np.cos(np.pi * np.clip((t - batas) / turun, 0, 1)),
+    )
+    return keluar
+
+
+def woosh(durasi=0.3, puncak=0.3):
+    """
+    Desir tipis yang menyapu ke atas.
+
+    Dijaga di frekuensi tinggi: begitu energinya turun ke bawah ~1 kHz,
+    derau yang disapu berhenti terdengar seperti udara dan mulai terdengar
+    seperti sesuatu yang lain. Amplopnya juga dibuat naik-turun mulus,
+    karena serangan yang lambat membuatnya terdengar mendorong.
+    """
     n = int(SR * durasi)
     derau = np.random.default_rng(7).normal(0, 1, n)
 
-    # Sapuan dikerjakan bertahap: tiap potongan difilter pada frekuensi
-    # yang makin tinggi, lalu disambung.
-    potongan = 24
-    batas = np.linspace(500, 3200, potongan)
-    keluar = np.zeros(n)
-    panjang = n // potongan
-    for i, f in enumerate(batas):
-        a, b = i * panjang, n if i == potongan - 1 else (i + 1) * panjang
-        bb, aa = butter(2, [max(f - 350, 120) / (SR / 2), min(f + 350, SR / 2 - 200) / (SR / 2)], btype="band")
-        keluar[a:b] = lfilter(bb, aa, derau)[a:b]
+    # Beberapa pita dihitung penuh lalu dicampur dengan bobot yang bergeser
+    # seiring waktu. Dicampur begitu, sapuannya mulus — tidak ada sambungan
+    # antar potongan yang terdengar sebagai kerikil.
+    pusat = np.geomspace(2200, 9500, 10)
+    pita = np.empty((len(pusat), n))
+    for i, f in enumerate(pusat):
+        lo = max(f / 1.7, 300) / (SR / 2)
+        hi = min(f * 1.7, SR / 2 - 500) / (SR / 2)
+        bb, aa = butter(2, [lo, hi], btype="band")
+        pita[i] = lfilter(bb, aa, derau)
 
-    return normalkan(keluar * amplop(n, 0.05, 0.11), puncak)
+    posisi = np.linspace(0, len(pusat) - 1, n)
+    indeks = np.arange(len(pusat))[:, None]
+    bobot = np.exp(-((indeks - posisi[None, :]) ** 2) / (2 * 1.1**2))
+    bobot /= bobot.sum(axis=0, keepdims=True)
+
+    return normalkan((pita * bobot).sum(axis=0) * tirai(n), puncak)
 
 
 def klik(durasi=0.13, puncak=0.30):
