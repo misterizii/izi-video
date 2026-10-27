@@ -68,6 +68,10 @@ export const materiSchema = z
 
     /** Latar navy adalah bawaannya: lebih teduh dilihat anak di layar terang. */
     tema: z.enum(['light', 'dark']).default('dark'),
+
+    /** Penanda bunyi di tiap perpindahan. Matikan kalau videonya akan diberi
+     *  sound dari pustaka TikTok saat diunggah. */
+    bunyi: z.boolean().default(true),
   })
   .superRefine((materi, ctx) => {
     materi.bagian.forEach((b, i) => {

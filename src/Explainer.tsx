@@ -17,6 +17,7 @@ import { beatAt, buildTimeline } from './timeline';
 import { masuk, redup } from './anim';
 import { KartuBagian, PanahBawah } from './scenes/KartuBagian';
 import { JawabanSalah } from './scenes/JawabanSalah';
+import { Bunyi } from './Bunyi';
 
 /** Akun tempat video ini diunggah. */
 const HANDLE = '@iziilearning';
@@ -105,6 +106,7 @@ export function Explainer(materi: Materi) {
 
   return (
     <AbsoluteFill style={{ background: 'var(--mz-bg)' }}>
+      {materi.bunyi && <Bunyi beats={beats} fps={fps} />}
       <MzProvider theme={materi.tema} motion="static" style={{ width: '100%', height: '100%' }}>
         <ReelsFrame
           theme={materi.tema}
