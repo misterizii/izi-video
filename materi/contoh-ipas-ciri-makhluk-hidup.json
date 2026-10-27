@@ -1,0 +1,20 @@
+{
+  "mapel": "IPAS",
+  "kelas": "3",
+  "topik": "Makhluk Hidup",
+  "episode": 1,
+  "judul": "3 ciri makhluk hidup",
+  "kataKunci": "makhluk hidup",
+  "pembukaCelah": {
+    "jenis": "pertanyaan",
+    "teks": "Mobil bisa bergerak. Jadi mobil makhluk hidup?"
+  },
+  "alur": "sejajar",
+  "bagian": [
+    { "judul": "Bergerak sendiri", "penjelasan": "Makhluk hidup bergerak tanpa ada yang menyalakan." },
+    { "judul": "Bernapas", "penjelasan": "Mengambil udara terus-menerus untuk bertahan hidup." },
+    { "judul": "Tumbuh dan berkembang biak", "penjelasan": "Bertambah besar, lalu punya keturunan." }
+  ],
+  "rekap": "Bergerak sendiri, bernapas, tumbuh. Mobil hanya punya satu.",
+  "pancingan": "Kalau begitu, apakah api termasuk makhluk hidup?"
+}

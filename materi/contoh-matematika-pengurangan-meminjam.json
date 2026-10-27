@@ -1,0 +1,25 @@
+{
+  "mapel": "Matematika",
+  "kelas": "3",
+  "topik": "Pengurangan Meminjam",
+  "episode": 1,
+  "judul": "205 - 128 kenapa sering salah",
+  "kataKunci": "sering salah",
+  "pembukaCelah": {
+    "jenis": "miskonsepsi",
+    "teks": "Banyak yang menjawab 123. Kenapa salah?",
+    "jawabanSalah": "123"
+  },
+  "istilahKunci": {
+    "istilah": "Meminjam",
+    "arti": "Mengambil satu puluhan untuk menambah satuan."
+  },
+  "alur": "urut",
+  "bagian": [
+    { "judul": "Satuan tidak cukup", "penjelasan": "5 dikurangi 8 tidak bisa, jadi harus meminjam." },
+    { "judul": "Pinjam dari ratusan", "penjelasan": "Puluhannya kosong, jadi pinjam dulu dari ratusan." },
+    { "judul": "Kurangi dari kanan", "penjelasan": "Setelah meminjam, kurangi satuan, puluhan, lalu ratusan." }
+  ],
+  "rekap": "Cek satuan, pinjam kalau kurang, baru kurangi.",
+  "pancingan": "Coba 300 - 147. Jawab di komentar."
+}

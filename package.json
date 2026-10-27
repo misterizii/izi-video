@@ -1,0 +1,29 @@
+{
+  "name": "misterizii-video",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Video penjelasan materi 9:16 untuk Reels/TikTok/Shorts — satu template, materi diisi lewat JSON",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "remotion studio",
+    "render": "remotion render Explainer",
+    "cek": "tsx scripts/cek-materi.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.410",
+    "@remotion/google-fonts": "4.0.410",
+    "misterizii-style": "github:misterizii/design-style#siapkan-untuk-render-video",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.410",
+    "zod": "3.22.3"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "tsx": "4.19.2",
+    "typescript": "5.6.3"
+  }
+}
