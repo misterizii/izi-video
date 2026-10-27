@@ -15,12 +15,30 @@ export const DURASI_DETIK = {
   intro: 3,
   celah: 6,
   istilah: 4,
-  bagian: 9,
   rekap: 6,
   pancingan: 5,
 } as const;
 
 export const BATAS_DETIK = 60;
+
+/**
+ * Panjang beat bagian mengikuti panjang kalimatnya, bukan angka tetap.
+ *
+ * Durasi tetap selalu salah di salah satu arah: kalimat pendek jadi
+ * menggantung, kalimat panjang terpotong sebelum anak selesai membaca.
+ * Pembaca kelas 3 butuh waktu jauh lebih lama daripada orang dewasa, jadi
+ * dasarnya dihitung dari jumlah kata, lalu dijaga di rentang yang wajar.
+ */
+export const DETIK_DASAR_BAGIAN = 3;
+export const DETIK_PER_KATA = 0.6;
+export const DETIK_BAGIAN_MIN = 7;
+export const DETIK_BAGIAN_MAKS = 10;
+
+export function detikBagian(penjelasan: string): number {
+  const kata = penjelasan.trim().split(/\s+/).filter(Boolean).length;
+  const hitung = DETIK_DASAR_BAGIAN + kata * DETIK_PER_KATA;
+  return Math.min(DETIK_BAGIAN_MAKS, Math.max(DETIK_BAGIAN_MIN, hitung));
+}
 
 export function buildTimeline(materi: Materi, fps: number): { beats: Beat[]; totalInFrames: number } {
   const urutan: Array<{ kind: BeatKind; index?: number; detik: number }> = [
@@ -32,8 +50,8 @@ export function buildTimeline(materi: Materi, fps: number): { beats: Beat[]; tot
     urutan.push({ kind: 'istilah', detik: DURASI_DETIK.istilah });
   }
 
-  materi.bagian.forEach((_, index) => {
-    urutan.push({ kind: 'bagian', index, detik: DURASI_DETIK.bagian });
+  materi.bagian.forEach((b, index) => {
+    urutan.push({ kind: 'bagian', index, detik: detikBagian(b.penjelasan) });
   });
 
   urutan.push({ kind: 'rekap', detik: DURASI_DETIK.rekap });

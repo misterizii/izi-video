@@ -66,7 +66,8 @@ export const materiSchema = z
     /** Ajakan menjawab, mis. soal berikutnya. */
     pancingan: z.string().min(1),
 
-    tema: z.enum(['light', 'dark']).default('light'),
+    /** Latar navy adalah bawaannya: lebih teduh dilihat anak di layar terang. */
+    tema: z.enum(['light', 'dark']).default('dark'),
   })
   .superRefine((materi, ctx) => {
     materi.bagian.forEach((b, i) => {

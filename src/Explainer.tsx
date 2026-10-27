@@ -18,6 +18,9 @@ import { masuk, redup } from './anim';
 import { KartuBagian, PanahBawah } from './scenes/KartuBagian';
 import { JawabanSalah } from './scenes/JawabanSalah';
 
+/** Akun tempat video ini diunggah. */
+const HANDLE = '@iziilearning';
+
 /** Memasang stabilo mangga pada satu kata di dalam judul. */
 function sorot(judul: string, kataKunci?: string): ReactNode {
   if (!kataKunci) return judul;
@@ -106,6 +109,7 @@ export function Explainer(materi: Materi) {
         <ReelsFrame
           theme={materi.tema}
           motion="static"
+          handle={HANDLE}
           hook={pil}
           title={judul ? <span style={masuk(local, { fps })}>{judul}</span> : undefined}
           caption={caption ? <span style={masuk(local, { delay: Math.round(fps * 0.3), fps })}>{caption}</span> : undefined}
