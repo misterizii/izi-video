@@ -1,12 +1,16 @@
 import { Fragment, type ReactNode } from 'react';
 import { AbsoluteFill, useCurrentFrame, useVideoConfig } from 'remotion';
-import { loadFont } from '@remotion/google-fonts/PlusJakartaSans';
 import { MzProvider, ReelsFrame, Highlight } from 'misterizii-style';
+// Font dibawa sendiri, bukan diambil dari Google Fonts saat render. Render
+// jadi tidak bergantung jaringan, dan hasilnya selalu sama di mana pun.
+// Empat berat ini yang dipakai design system: 400, 500, 700, 800.
+import '@fontsource/plus-jakarta-sans/latin-400.css';
+import '@fontsource/plus-jakarta-sans/latin-500.css';
+import '@fontsource/plus-jakarta-sans/latin-700.css';
+import '@fontsource/plus-jakarta-sans/latin-800.css';
 // styles.base.css, bukan styles.css: entri ini tidak mengambil font dari
 // Google Fonts lewat @import, karena renderer tidak menunggunya selesai.
 import 'misterizii-style/styles.base.css';
-
-loadFont();
 
 import type { Materi } from './schema';
 import { beatAt, buildTimeline } from './timeline';
