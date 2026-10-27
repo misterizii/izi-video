@@ -114,7 +114,7 @@ export function Explainer(materi: Materi) {
           handle={HANDLE}
           hook={pil}
           title={judul ? <span style={masuk(local, { fps })}>{judul}</span> : undefined}
-          caption={caption ? <span style={masuk(local, { delay: Math.round(fps * 0.3), fps })}>{caption}</span> : undefined}
+          caption={caption ? <span style={masuk(local, { delay: Math.round(fps * 0.12), fps })}>{caption}</span> : undefined}
           style={{ width: '100%', height: '100%' }}
         >
           {visual}
@@ -152,7 +152,7 @@ function TumpukanKartu({ materi, aktif, tampil, urut, ukuran = 'besar', local, f
       {kartu.map((b, i) => {
         const terakhir = i === kartu.length - 1;
         const disorot = aktif === -1 || i === aktif;
-        const delay = aktif === -1 ? Math.round(i * fps * 0.25) : terakhir ? 0 : -fps;
+        const delay = aktif === -1 ? Math.round(i * fps * 0.15) : terakhir ? 0 : -fps;
 
         return (
           <Fragment key={i}>

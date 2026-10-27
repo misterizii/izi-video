@@ -12,11 +12,11 @@ export interface Beat {
 
 /** Panjang tiap beat dalam detik. Totalnya dijaga tetap di bawah 60 detik. */
 export const DURASI_DETIK = {
-  intro: 3,
-  celah: 6,
-  istilah: 4,
-  rekap: 6,
-  pancingan: 5,
+  intro: 2.5,
+  celah: 4.5,
+  istilah: 3.5,
+  rekap: 5,
+  pancingan: 4,
 } as const;
 
 export const BATAS_DETIK = 60;
@@ -29,10 +29,10 @@ export const BATAS_DETIK = 60;
  * Pembaca kelas 3 butuh waktu jauh lebih lama daripada orang dewasa, jadi
  * dasarnya dihitung dari jumlah kata, lalu dijaga di rentang yang wajar.
  */
-export const DETIK_DASAR_BAGIAN = 3;
-export const DETIK_PER_KATA = 0.6;
-export const DETIK_BAGIAN_MIN = 7;
-export const DETIK_BAGIAN_MAKS = 10;
+export const DETIK_DASAR_BAGIAN = 2.5;
+export const DETIK_PER_KATA = 0.55;
+export const DETIK_BAGIAN_MIN = 6;
+export const DETIK_BAGIAN_MAKS = 9;
 
 export function detikBagian(penjelasan: string): number {
   const kata = penjelasan.trim().split(/\s+/).filter(Boolean).length;

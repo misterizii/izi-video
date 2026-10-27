@@ -20,7 +20,7 @@ export function masuk(local: number, { delay = 0, jarak = 28, fps }: MasukOpts):
   const s = spring({
     frame: local - delay,
     fps,
-    config: { damping: 200, stiffness: 110, mass: 0.6 },
+    config: { damping: 200, stiffness: 190, mass: 0.5 },
   });
 
   return {
