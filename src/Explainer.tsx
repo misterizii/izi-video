@@ -18,6 +18,7 @@ import { masuk, redup } from './anim';
 import { KartuBagian, PanahBawah } from './scenes/KartuBagian';
 import { JawabanSalah } from './scenes/JawabanSalah';
 import { Nomor, Visual } from './scenes/Visual';
+import { PengurangBersusun } from './scenes/PengurangBersusun';
 import { Bunyi } from './Bunyi';
 
 /** Akun tempat video ini diunggah. */
@@ -73,7 +74,7 @@ export function Explainer(materi: Materi) {
     const b = materi.bagian[aktif];
     caption = b.penjelasan;
 
-    if (b.visual) {
+    if (b.peraga || b.visual) {
       // Gambar khusus mengambil ruang utama. Judul bagian naik jadi baris
       // besar, dengan nomornya tetap ada sebagai penanda urutan pembahasan.
       judul = (
@@ -82,7 +83,11 @@ export function Explainer(materi: Materi) {
           {b.judul}
         </span>
       );
-      visual = <Visual svg={b.visual} style={masuk(local, { delay: Math.round(fps * 0.2), fps })} />;
+      visual = b.peraga ? (
+        <PengurangBersusun atas={b.peraga.atas} bawah={b.peraga.bawah} tahap={b.peraga.tahap} local={local} fps={fps} />
+      ) : (
+        <Visual svg={b.visual as string} style={masuk(local, { delay: Math.round(fps * 0.2), fps })} />
+      );
     } else {
       visual = (
         <TumpukanKartu

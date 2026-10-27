@@ -28,6 +28,19 @@ export const bagianSchema = z.object({
    * Kalau dikosongkan, yang tampil adalah kartu bernomor bawaan.
    */
   visual: z.string().optional(),
+  /**
+   * Peraga bergerak yang digambar per frame, untuk materi yang punya proses.
+   * Lebih hidup daripada `visual` yang diam, tapi hanya tersedia untuk jenis
+   * yang sudah ada komponennya.
+   */
+  peraga: z
+    .object({
+      jenis: z.literal('pengurangan-bersusun'),
+      atas: z.string().regex(/^\d+$/),
+      bawah: z.string().regex(/^\d+$/),
+      tahap: z.union([z.literal(1), z.literal(2), z.literal(3)]),
+    })
+    .optional(),
 });
 
 export const pembukaCelahSchema = z.discriminatedUnion('jenis', [

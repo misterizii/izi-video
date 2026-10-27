@@ -1,0 +1,37 @@
+{
+  "mapel": "Matematika",
+  "kelas": "3",
+  "topik": "Pengurangan Meminjam",
+  "episode": 2,
+  "judul": "305 - 238 bikin banyak anak nyerah",
+  "kataKunci": "nyerah",
+  "pembukaCelah": {
+    "jenis": "miskonsepsi",
+    "teks": "Banyak yang jawab segini. Coba lihat kenapa keliru.",
+    "jawabanSalah": "133"
+  },
+  "istilahKunci": {
+    "istilah": "Meminjam",
+    "arti": "Ambil satu dari kiri, biar yang kanan cukup."
+  },
+  "alur": "urut",
+  "bagian": [
+    {
+      "judul": "5 dikurangi 8? Kurang",
+      "penjelasan": "Angkanya nggak cukup. Cari pinjaman dulu ke sebelah kiri.",
+      "peraga": { "jenis": "pengurangan-bersusun", "atas": "305", "bawah": "238", "tahap": 1 }
+    },
+    {
+      "judul": "Puluhannya nol juga",
+      "penjelasan": "Pinjam dari ratusan dulu. Yang nol berubah jadi sembilan.",
+      "peraga": { "jenis": "pengurangan-bersusun", "atas": "305", "bawah": "238", "tahap": 2 }
+    },
+    {
+      "judul": "Sekarang baru bisa",
+      "penjelasan": "Kerjakan dari kanan: 15 - 8, 9 - 3, lalu 2 - 2.",
+      "peraga": { "jenis": "pengurangan-bersusun", "atas": "305", "bawah": "238", "tahap": 3 }
+    }
+  ],
+  "rekap": "Kalau atasnya kurang, pinjam. Nol jadi sembilan.",
+  "pancingan": "Giliranmu: 400 - 176. Tulis di komentar!"
+}
