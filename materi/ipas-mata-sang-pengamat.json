@@ -1,0 +1,32 @@
+{
+  "mapel": "IPAS",
+  "kelas": "3",
+  "topik": "Mata Sang Pengamat",
+  "episode": 1,
+  "judul": "Matamu punya 3 penjaga",
+  "kataKunci": "3 penjaga",
+  "pembukaCelah": {
+    "jenis": "pertanyaan",
+    "teks": "Kena debu, keringat, angin. Kok matamu baik-baik aja?"
+  },
+  "alur": "sejajar",
+  "bagian": [
+    {
+      "judul": "Alis",
+      "penjelasan": "Keringat dari dahi dibelokkan ke samping, nggak masuk mata.",
+      "visual": "<svg viewBox='0 0 560 330' width='100%' style='max-height:100%'><circle cx='240' cy='40' r='11' fill='var(--mz-accent)' opacity='0.4'/><path d='M226 52 Q145 68 115 132' fill='none' stroke='var(--mz-accent)' stroke-width='7' stroke-linecap='round' opacity='0.55'/><circle cx='113' cy='142' r='12' fill='var(--mz-accent)' opacity='0.9'/><circle cx='320' cy='40' r='11' fill='var(--mz-accent)' opacity='0.4'/><path d='M334 52 Q415 68 445 132' fill='none' stroke='var(--mz-accent)' stroke-width='7' stroke-linecap='round' opacity='0.55'/><circle cx='447' cy='142' r='12' fill='var(--mz-accent)' opacity='0.9'/><path d='M160 105 Q280 55 400 105' fill='none' stroke='var(--mz-accent)' stroke-width='18' stroke-linecap='round'/><line x1='186' y1='168' x2='170' y2='142' stroke='var(--mz-text-muted)' stroke-width='6' stroke-linecap='round'/><line x1='223' y1='144' x2='213' y2='115' stroke='var(--mz-text-muted)' stroke-width='6' stroke-linecap='round'/><line x1='280' y1='134' x2='280' y2='103' stroke='var(--mz-text-muted)' stroke-width='6' stroke-linecap='round'/><line x1='337' y1='144' x2='347' y2='115' stroke='var(--mz-text-muted)' stroke-width='6' stroke-linecap='round'/><line x1='374' y1='168' x2='390' y2='142' stroke='var(--mz-text-muted)' stroke-width='6' stroke-linecap='round'/><path d='M150 200 Q280 115 410 200 Q280 285 150 200 Z' fill='none' stroke='var(--mz-heading)' stroke-width='9' stroke-linejoin='round'/><circle cx='280' cy='200' r='48' fill='var(--mz-heading)' opacity='0.85'/><circle cx='280' cy='200' r='20' fill='var(--mz-bg)'/></svg>"
+    },
+    {
+      "judul": "Bulu mata",
+      "penjelasan": "Debu dan kotoran tertahan sebelum sempat kena mata.",
+      "visual": "<svg viewBox='0 0 560 330' width='100%' style='max-height:100%'><circle cx='232' cy='66' r='10' fill='var(--mz-accent)' opacity='0.7'/><circle cx='280' cy='44' r='13' fill='var(--mz-accent)' opacity='0.7'/><circle cx='330' cy='70' r='9' fill='var(--mz-accent)' opacity='0.7'/><circle cx='192' cy='88' r='7' fill='var(--mz-accent)' opacity='0.7'/><circle cx='372' cy='90' r='8' fill='var(--mz-accent)' opacity='0.7'/><path d='M160 105 Q280 55 400 105' fill='none' stroke='var(--mz-text-muted)' stroke-width='12' stroke-linecap='round'/><line x1='186' y1='168' x2='170' y2='142' stroke='var(--mz-accent)' stroke-width='9' stroke-linecap='round'/><line x1='223' y1='144' x2='213' y2='115' stroke='var(--mz-accent)' stroke-width='9' stroke-linecap='round'/><line x1='280' y1='134' x2='280' y2='103' stroke='var(--mz-accent)' stroke-width='9' stroke-linecap='round'/><line x1='337' y1='144' x2='347' y2='115' stroke='var(--mz-accent)' stroke-width='9' stroke-linecap='round'/><line x1='374' y1='168' x2='390' y2='142' stroke='var(--mz-accent)' stroke-width='9' stroke-linecap='round'/><path d='M150 200 Q280 115 410 200 Q280 285 150 200 Z' fill='none' stroke='var(--mz-heading)' stroke-width='9' stroke-linejoin='round'/><circle cx='280' cy='200' r='48' fill='var(--mz-heading)' opacity='0.85'/><circle cx='280' cy='200' r='20' fill='var(--mz-bg)'/></svg>"
+    },
+    {
+      "judul": "Kelopak mata",
+      "penjelasan": "Menutup secepat kilat kalau ada bahaya mendekat.",
+      "visual": "<svg viewBox='0 0 560 330' width='100%' style='max-height:100%'><path d='M160 105 Q280 55 400 105' fill='none' stroke='var(--mz-text-muted)' stroke-width='12' stroke-linecap='round'/><line x1='186' y1='168' x2='170' y2='142' stroke='var(--mz-text-muted)' stroke-width='6' stroke-linecap='round'/><line x1='223' y1='144' x2='213' y2='115' stroke='var(--mz-text-muted)' stroke-width='6' stroke-linecap='round'/><line x1='280' y1='134' x2='280' y2='103' stroke='var(--mz-text-muted)' stroke-width='6' stroke-linecap='round'/><line x1='337' y1='144' x2='347' y2='115' stroke='var(--mz-text-muted)' stroke-width='6' stroke-linecap='round'/><line x1='374' y1='168' x2='390' y2='142' stroke='var(--mz-text-muted)' stroke-width='6' stroke-linecap='round'/><path d='M150 200 Q280 115 410 200 Q280 285 150 200 Z' fill='none' stroke='var(--mz-heading)' stroke-width='9' stroke-linejoin='round'/><circle cx='280' cy='200' r='48' fill='var(--mz-heading)' opacity='0.85'/><circle cx='280' cy='200' r='20' fill='var(--mz-bg)'/><path d='M150 200 Q280 115 410 200 Q280 252 150 200 Z' fill='var(--mz-bg)'/><path d='M150 200 Q280 252 410 200' fill='none' stroke='var(--mz-accent)' stroke-width='11' stroke-linecap='round'/><path d='M120 170 q-14 24 0 48' fill='none' stroke='var(--mz-accent)' stroke-width='7' stroke-linecap='round' opacity='0.5'/><path d='M440 170 q14 24 0 48' fill='none' stroke='var(--mz-accent)' stroke-width='7' stroke-linecap='round' opacity='0.5'/></svg>"
+    }
+  ],
+  "rekap": "Alis, bulu mata, kelopak. Tiganya penjaga matamu.",
+  "pancingan": "Coba hitung, semenit kamu berkedip berapa kali?"
+}
